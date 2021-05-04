@@ -30,7 +30,7 @@ plt.legend(data_sum[0:20].index,
           bbox_to_anchor=(1.5,1,0.1,0))
 plt.savefig("readers.png")
 
-pdfmetrics.registerFont(TTFont("Trebuchet", "C:\PythonScript\GitRepo\Portfolio\Допматериалы\Trebuchet.ttf"))
+pdfmetrics.registerFont(TTFont("Trebuchet", "https://github.com/Armada000/Portfolio/blob/main/%D0%94%D0%BE%D0%BF%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B/Trebuchet.ttf"))
 PDF = canvas.Canvas("readers.pdf", pagesize=pagesizes.A4)
 PDF.setFont("Trebuchet", 48)
 PDF.drawString(70, 650, "Посетители библиотек")
@@ -45,7 +45,7 @@ PDF.setFont("Trebuchet", 20)
 PDF.drawString(100, 90,
                "Посетителей: " + str(int(data_sum["NumOfVisitors"].values[0])))
 PDF.save()
-files = ["C:\PythonScript\GitRepo\Portfolio\Допматериалы\\title.pdf", "readers.pdf"]
+files = ["https://github.com/Armada000/Portfolio/blob/main/%D0%94%D0%BE%D0%BF%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B/title.pdf", "https://github.com/Armada000/Portfolio/blob/main/%D0%94%D0%BE%D0%BF%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B/readers.pdf"]
 merger = PdfFileMerger()
 for filename in files:
     merger.append(PdfFileReader(open(filename, "rb")))
